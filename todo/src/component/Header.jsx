@@ -1,5 +1,5 @@
 import React from 'react'
-
+import './layout.css'
 function Header() {
   return (
     <div className='header-design'>

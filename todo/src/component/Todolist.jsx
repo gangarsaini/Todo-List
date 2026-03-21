@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import TodoItem from './TodoItem';
-  
+import './layout.css'
 function Todolist() {
 const [input, setInput] = useState('');
 const [item,setItem] = useState([]);
@@ -21,14 +21,17 @@ setItem(StoreDelete);
 }
 
 return (
-    <div>
+
+    <div className='container'>
       <div className='todoitem'>
       <input type="text" value={input} placeholder='Enter the task' onChange={(e)=>setInput(e.target.value)}/>
       <button onClick={()=>addList()} >Add</button>
 
     </div>
-      <TodoItem   deleteItem={deleteItem} mark={mark} item={item}/>
+     <TodoItem   deleteItem={deleteItem} mark={mark} item={item}/>
     </div>
+   
+    
   )
 }
 
