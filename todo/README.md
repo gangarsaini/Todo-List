@@ -14,3 +14,29 @@ The React Compiler is not enabled on this template because of its impact on dev 
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+
+# Project Information
+
+# React Todo App (Vite + Tailwind)
+
+A lightweight, functional Task Management application built with **React**, **Vite**, and **Tailwind CSS**.
+
+## 🚀 Tech Stack
+- **Frontend:** React (Vite)
+- **Styling:** Tailwind CSS (v4/Vite plugin)
+- **Icons:** React Icons (`md` & `io` sets)
+
+## ✨ Features
+- **Add Tasks:** Create new tasks instantly.
+- **Update Tasks:** Inline editing logic using a dedicated `update` state.
+- **Delete Tasks:** Remove completed or unwanted items.
+- **Duplicate Prevention:** Logic to ensure the same task cannot be added twice.
+- **Conditional Rendering:** Dynamic UI states (e.g., toggling between "Add" and "Update" modes).
+
+## 🛠️ Installation & Setup
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/gangarsaini/Todo-List.git
+ 
