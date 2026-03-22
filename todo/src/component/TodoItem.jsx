@@ -4,9 +4,9 @@ import { MdOutlineDone } from "react-icons/md";
 import { RxUpdate } from "react-icons/rx";
 import './layout.css'
 function TodoItem({item,deleteItem,mark,editItem}) {
- 
+
   return (
-    <div className='w-[764px] overflow-auto max-h-[calc(78vh-80px)] mx-auto'>
+    <div className='m:w-[764px] w-[100%]  overflow-auto max-h-[calc(78vh-80px)] mx-auto px-2.5'>
       <ul>
       {item.map((items, index) => {
         return (
@@ -18,7 +18,7 @@ function TodoItem({item,deleteItem,mark,editItem}) {
              <span className='flex'>
             <button className='text-[#ef4444] cursor-pointer text-[20px]' onClick={()=>deleteItem(index)}> <MdDelete/></button> 
             <span className='text-[#ef4444] cursor-pointer text-[20px] mx-2.5' onClick={()=>editItem(index)} ><RxUpdate /></span>
-           
+          
              </span> 
              </li>
             
