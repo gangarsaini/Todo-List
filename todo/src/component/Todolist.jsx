@@ -5,7 +5,6 @@ import './layout.css';
 function Todolist() {
 const [input, setInput] = useState('');
 const [item,setItem] = useState([]);
-const [mark , setMark] =  useState(false);
 const [editdata, setEditData] = useState(null);
 const[err,setErr] = useState("");
 
@@ -13,33 +12,36 @@ const[err,setErr] = useState("");
 
 
 function addList(){
-  if(input== 0) return;
-  if(item.includes(input)){
+  if(input.trim() === "") return;
+  if(item.some((el)=> el.text === input)){
    return setErr("this name is already Present");
 }
 
 if(editdata !== null){
   const updatedData = [...item];
-  updatedData[editdata] = input
+  updatedData[editdata].text = input
   setItem(updatedData)
   setEditData(null)
 }
 else{
-    setItem([...item, input]);
+    setItem([...item, {text:input, completed:false}]);
     
 }
-setMark(true)
 setInput("")
 setErr("")
 }
 
-
-
 function editItem(index){
- setInput(item[index])
+ setInput(item[index].text)
  setEditData(index)
 }
 
+
+function toggleMarkTask(index){
+  const updatetask = [...item]
+  updatetask[index].completed = !updatetask[index].completed;
+  setItem(updatetask)
+}
 
 function deleteItem(indexDelete){
 const StoreDelete =  item.filter((_,index)=> index !== indexDelete);
@@ -55,10 +57,10 @@ return (
     </div>
      <TodoItem   
      deleteItem={deleteItem} 
-     mark={mark} 
-     item={item}
+      item={item}
      editItem={editItem} 
      setEditData={setEditData}
+     toggleMarkTask={toggleMarkTask} 
      />
     <span className='text-amber-700 flex justify-center p-1'>{err}</span>
     </div>

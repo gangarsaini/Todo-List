@@ -33,6 +33,7 @@ A lightweight, functional Task Management application built with **React**, **Vi
 - **Delete Tasks:** Remove completed or unwanted items.
 - **Duplicate Prevention:** Logic to ensure the same task cannot be added twice.
 - **Conditional Rendering:** Dynamic UI states (e.g., toggling between "Add" and "Update" modes).
+- **task done mark it** if your task is done, click on it to mark it done.
 
 ## 🛠️ Installation & Setup
 
